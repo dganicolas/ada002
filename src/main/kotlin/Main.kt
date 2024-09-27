@@ -13,11 +13,22 @@ import kotlin.io.path.Path
 fun main() {
     val prueba = CalificacionesRepository()
     val diccioanrio =prueba.crearListaDiccionarios(Path("src/main/resources/calificaciones.csv"))
-    println(diccioanrio)
+    diccioanrio.forEach{
+        println(it)
+        println()
+    }
+    println("######################################################################################")
     val diccionarioConNotasFinales = prueba.anadirNotaFinalDiccionario(diccioanrio)
-    println(diccionarioConNotasFinales)
+    diccionarioConNotasFinales.forEach{
+        println(it)
+        println()
+    }
+    println("######################################################################################")
     val diccionarioConAprobadosOSuspendido = prueba.alumnoEstaAprobado(diccionarioConNotasFinales)
-    println(diccionarioConAprobadosOSuspendido)
+    diccionarioConAprobadosOSuspendido.forEach{
+        println(it)
+        println()
+    }
 
 
 }

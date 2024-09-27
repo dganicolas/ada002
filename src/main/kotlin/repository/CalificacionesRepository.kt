@@ -32,6 +32,7 @@ class CalificacionesRepository {
                 }
             }
         }
+        listaDiccionario.toSortedMap()
         return listaDiccionario
     }
 
